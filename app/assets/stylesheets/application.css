@@ -17,3 +17,7 @@
 .buffer-right {
   float: right;
 }
+
+.buffer-left {
+  margin-left: 30px;
+}

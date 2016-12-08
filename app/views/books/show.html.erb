@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1><%= @book.title %></h1>
+    <p>Выложил: <%= @book.user.name %> </p>
+  </div>
+</div>
+
+<div class="row thumbnail">
+  <div class="col-sm-6">
+    <div class="caption">
+      <p> <%= image_tag @book.avatar_title if @book.avatar_title? %> </p>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <h4>Описание</h4>
+    <p><%= @book.description %></p><br>
+    <p><em>Автор: <%= @book.author %></em></p>
+  </div>
+</div>
+
+
