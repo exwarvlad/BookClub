@@ -14,8 +14,10 @@
 
   <div class="col-sm-6">
     <h4>Описание</h4>
-    <p><%= @book.description %></p><br>
-    <p><em>Автор: <%= @book.author %></em></p>
+    <p><%= get_book_description(@book.description) %></p><br>
+    <p><em>Автор: <%= get_book_params(@book.author) %></em></p>
+    <p><em>Жанр: <%= get_book_params(@book.genre) %></em></p>
+    <p><em>Год выпуска: <%= get_book_params(@book.year) %></em></p>
   </div>
 </div>
 
