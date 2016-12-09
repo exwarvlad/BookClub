@@ -1,0 +1,11 @@
+<div class="buffer-bottom">
+  <p><%= comment.body %></p>
+  <p>
+    <span>
+      <em><strong><%= comment.user.name %></strong></em>
+    </span>
+    <em><%= l comment.created_at, format: :short %></em>
+
+  </p>
+</div>
+

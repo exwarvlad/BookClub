@@ -2,3 +2,7 @@ ru:
   controllers:
     book:
       created: 'Книга успешно выложена'
+  models:
+    comment:
+      user_name: 'Ваше имя'
+      body: 'Комментарий'
