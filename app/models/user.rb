@@ -5,6 +5,4 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :books
-
-  mount_uploader :avatar_title, AvatarTitleUploader
 end

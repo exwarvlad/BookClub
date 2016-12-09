@@ -1,0 +1,4 @@
+ru:
+  controllers:
+    book:
+      created: 'Книга успешно выложена'

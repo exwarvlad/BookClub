@@ -17,3 +17,12 @@ module BooksHelper
     end
   end
 end
+
+# склонятор автор, авторы
+def sklonyator(author)
+  if author.include?(" и ") || author.include?(" and ")
+    "Авторы"
+  else
+    "Автор"
+  end
+end
