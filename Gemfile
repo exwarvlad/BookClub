@@ -21,6 +21,7 @@ group :development, :test do
   gem 'byebug'
 end
 
+# для работы на heroku
 group :production do
   gem 'pg'
   gem 'uglifier'

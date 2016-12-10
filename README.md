@@ -26,6 +26,12 @@
    gem 'sqlite3'
    gem 'byebug'
  end
+ 
+ # для работы на heroku
+ group :production do
+   gem 'pg'
+   gem 'uglifier'
+ end
  ```
  
  *Чтобы установить гемы, выполните команду:*  
