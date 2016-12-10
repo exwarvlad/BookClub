@@ -1,4 +1,17 @@
 ru:
+  activerecord:
+    attributes:
+      user:
+        name: 'Имя'
+      book:
+        title: 'Название'
+        author: 'Автор'
+        genre: 'Жанр'
+        year: 'Год публикации'
+        avatar_title: 'Обложка книги'
+        description: 'Описание'
+      comment:
+        body: 'Оставить комментарий'
   controllers:
     book:
       created: 'Книга успешно выложена'
@@ -6,3 +19,5 @@ ru:
     comment:
       user_name: 'Ваше имя'
       body: 'Комментарий'
+  app:
+    company: 'Книголюб'

@@ -4,8 +4,8 @@ class Book < ActiveRecord::Base
 
   mount_uploader :avatar_title, AvatarTitleUploader
 
-  # validates :user, precense: true
-  # validates :description, lenght: [maximum: 555]
-  # validates :title, precense: true
-  # validates :avatar_title, precense: true
+  validates :user, presence: true
+  validates :description, length: {maximum: 555}
+  validates :title, presence: true
+  validates :avatar_title, presence: true
 end
