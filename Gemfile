@@ -21,3 +21,8 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :production do
+  gem 'pg'
+  gem 'uglifier'
+end
+
