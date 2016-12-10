@@ -15,6 +15,7 @@ ru:
   controllers:
     book:
       created: 'Книга успешно выложена'
+      create_error: 'Вам необходимо войти в систему или зарегистрироваться.'
   models:
     comment:
       user_name: 'Ваше имя'

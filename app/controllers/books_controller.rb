@@ -1,12 +1,14 @@
 class BooksController < ApplicationController
-
-
   def index
     @books = Book.all
   end
 
   def new
-    @book = current_user.books.build
+    if current_user.present?
+      @book = current_user.books.build
+    else
+      redirect_to '/users/sign_in', alert: I18n.t('controllers.book.create_error')
+    end
   end
 
   def create
