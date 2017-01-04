@@ -1,14 +1,14 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
+  before_action :set_book, only: [:show]
+  before_action :set_current_user_book, only: [:show]
+
   def index
     @books = Book.all
   end
 
   def new
-    if current_user.present?
-      @book = current_user.books.build
-    else
-      redirect_to '/users/sign_in', alert: I18n.t('controllers.book.create_error')
-    end
+    @book = current_user.books.build
   end
 
   def create
@@ -16,13 +16,11 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to root_path, notice: I18n.t('controllers.book.created')
     else
-      render new
+      render :new
     end
   end
 
   def show
-    @book = Book.find(params[:id])
-
     @new_comment = @book.comments.build(params[:comment])
   end
 
@@ -30,5 +28,13 @@ class BooksController < ApplicationController
 
   def book_params
     params.require(:book).permit(:title, :author, :description, :genre, :year, :avatar_title, :comment)
+  end
+
+  def set_current_user_book
+    @book = current_user.books.find(params[:id])
+  end
+
+  def set_book
+    @book = Book.find(params[:id])
   end
 end

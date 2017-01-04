@@ -29,3 +29,7 @@
 .buffer-top {
   padding-top :20px;
 }
+
+.norm-width {
+  word-wrap: break-word;
+}

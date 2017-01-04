@@ -6,6 +6,6 @@ class Book < ActiveRecord::Base
 
   validates :user, presence: true
   validates :description, length: {maximum: 580}
-  validates :title, presence: true
+  validates :title, presence: true, length: {maximum: 30}
   validates :avatar_title, presence: true
 end
