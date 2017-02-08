@@ -11,6 +11,12 @@ class UsersController < ApplicationController
     @books = Book.all.where(user: @user)
   end
 
+  def create
+    if @user.save
+      redirect_to root_path
+    end
+  end
+
   private
 
   def user_params
