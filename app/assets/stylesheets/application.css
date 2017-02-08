@@ -33,3 +33,17 @@
 .norm-width {
   word-wrap: break-word;
 }
+
+.resize {
+  width: 32px;
+  height: 32px;
+}
+
+.resize2 {
+  width: 35px;
+  height: 35px;
+}
+
+.buffer-left {
+  margin-left: 5px;
+}

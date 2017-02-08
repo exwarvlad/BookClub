@@ -248,9 +248,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, '613662682139521', '86ae5153cbb93a8b840e3331c74bf942', :strategy_class =>
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], :strategy_class =>
       OmniAuth::Strategies::Facebook
-  config.omniauth :vkontakte, '5864191', 'hsJCVdUSFf7V0sjAZfBk', :strategy_class =>
+  config.omniauth :vkontakte, ENV['VK_APP_ID'], ENV['VK_APP_SECRET'], :strategy_class =>
       OmniAuth::Strategies::Vkontakte
 
 
