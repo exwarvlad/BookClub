@@ -16,6 +16,9 @@ gem 'rmagick'
 
 gem 'fog-aws'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
