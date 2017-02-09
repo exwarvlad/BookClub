@@ -1,7 +1,7 @@
-<div class="col-sm-12 ">
-  <p>Пользователь: <strong><%= @user.name %></strong></p>
+<p>Пользователь: <strong><%= @user.name %></strong></p>
 
-  <h3>Выложенные книги</h3>
+<h3>Выложенные книги</h3>
+
+<div class="row buffer-bottom">
+  <%= render partial: 'books/book', collection: @books %>
 </div>
-
-<%= render partial: 'books/book', collection: @books %>

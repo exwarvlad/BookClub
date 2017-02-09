@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
 
   has_many :books
 
-  validates :name, presence: true
+  NAME_LENGTH = 30
+
+  validates :name, presence: true, length: {maximum: NAME_LENGTH}
 
   # Для работы OmniAuth
   def self.from_omniauth(auth)
