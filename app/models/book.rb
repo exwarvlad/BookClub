@@ -7,5 +7,10 @@ class Book < ActiveRecord::Base
   validates :user, presence: true
   validates :description, length: {maximum: 580}
   validates :title, presence: true, length: {maximum: 30}
+  validates :author, presence: true, length: {maximum: 30}
   validates :avatar_title, presence: true
+
+  TITLE_MAX_LENGTH = Book.validators_on(:title).select\
+  { |v| v.class == ActiveModel::Validations::LengthValidator }.first.options[:maximum]
+
 end
