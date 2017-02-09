@@ -3,13 +3,13 @@
     <%= render partial: 'partials/form_errors', locals: {model: @book} %>
 
     <div class="form-group">
-      <%= f.label :title, maxlength: book_title_max_length %>
-      <%= f.text_field :title, class: 'form-control', maxlength: book_title_max_length %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control', maxlength: Book::TITLE_MAXIMUM_LENGTH %>
     </div>
 
     <div class="form-group">
       <%= f.label :author %>
-      <%= f.text_field :author, class: 'form-control' %>
+      <%= f.text_field :author, class: 'form-control', maxlength: Book::AUTHOR_MAXIMUM_LENGTH %>
     </div>
 
     <div class="form-group">
@@ -30,7 +30,7 @@
 
     <div class="form-group">
       <%= f.label :description %>
-      <%= f.text_area :description, class: 'form-control' %>
+      <%= f.text_area :description, class: 'form-control', maxlength: Book::DESCRIPTION_MAXIMUM_LENGTH %>
     </div>
 
     <div class="action buffer-bottom">

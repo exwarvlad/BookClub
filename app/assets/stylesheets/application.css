@@ -34,9 +34,9 @@
   word-wrap: break-word;
 }
 
-p, h3, h1{
-  word-wrap: break-word;
-}
+/*p, h3, h1{*/
+  /*word-wrap: break-word;*/
+/*}*/
 
 .resize {
   width: 32px;
@@ -50,4 +50,13 @@ p, h3, h1{
 
 .buffer-left {
   margin-left: 5px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }

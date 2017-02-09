@@ -26,7 +26,3 @@ def sklonyator(author)
     "Автор"
   end
 end
-
-def book_title_max_length
-  Book::TITLE_MAX_LENGTH
-end
