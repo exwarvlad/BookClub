@@ -42,6 +42,10 @@
 
     <div class="action buffer-bottom">
       <%= f.submit 'Сохранить', class: 'btn btn-success' %>
+      <% if @book.persisted? %>
+        <%= link_to 'Удалить', @book, method: :delete, data: {confirm: 'Действительно удалить книгу?'}, class: 'btn btn-danger' %>
+          или <%= link_to 'вернуться', :back %>
+      <% end %>
     </div>
 
 <% end %>
