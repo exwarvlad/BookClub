@@ -14,3 +14,38 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(document).ready(function()
+{
+  $("#contentbox1").keyup(function()
+  {
+    var box=$(this).val();
+    var max_length = $(this).attr('maxlength');
+    var count = max_length - box.length;
+
+    if(box.length <= max_length)
+    {
+      $('#count1').html(count);
+    }
+    else
+      return false;
+  });
+});
+
+
+$(document).ready(function()
+{
+  $("#contentbox2").keyup(function()
+  {
+    var box=$(this).val();
+    var max_length = $(this).attr('maxlength');
+    var count = max_length - box.length;
+
+    if(box.length <= max_length)
+    {
+      $('#count2').html(count);
+    }
+    else
+      return false;
+  });
+});

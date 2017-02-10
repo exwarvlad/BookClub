@@ -3,7 +3,10 @@
 
     <div class="form-group">
       <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-control' %>
+      <span style="float: right;">
+        Осталось <span id="count2"><%= Comment::BODY_MAXIMUM_LENGTH %> </span> символов для ввода
+      </span>
+      <%= f.text_area :body, class: 'form-control', maxlength: Comment::BODY_MAXIMUM_LENGTH, id: 'contentbox2' %>
     </div>
 
     <div class="actions">
