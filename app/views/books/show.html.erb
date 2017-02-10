@@ -5,9 +5,11 @@
   </div>
 </div>
 
-<div class="buffer-bottom">
-  <%= link_to 'Редактировать', edit_book_path, class: 'btn btn-primary' %>
-</div>
+<% if current_user == @book.user %>
+    <div class="buffer-bottom">
+      <%= link_to 'Редактировать', edit_book_path, class: 'btn btn-primary' %>
+    </div>
+<% end %>
 
 <div class="row thumbnail">
   <div class="col-sm-6">
@@ -29,7 +31,7 @@
     <div class="buffer-top">
       <%= render partial: 'comments/form', locals: {comment: @new_comment || @book.comments.build} %>
     </div>
-<%	end %>
+<% end %>
 
 
 <div class="buffer-bottom buffer-top">
