@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
+      update_all_book_user_name_for @user # обнояю user_name книг
       redirect_to @user, notice: I18n.t('controllers.user.updated')
     else
       render :edit
@@ -42,6 +43,12 @@ class UsersController < ApplicationController
 
   def set_current_user
     @user = current_user
+  end
+
+  def update_all_book_user_name_for(user)
+    Book.all.where(user: user).each do |book|
+      book.update_attributes(user_name: user.name)
+    end
   end
 
 end

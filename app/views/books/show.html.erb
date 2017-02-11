@@ -4,7 +4,9 @@
     <% if @book.user.present? %>
         <p>Выложил: <strong><%= link_to @book.user.name, user_path(@book.user) %></strong></p>
     <% else %>
-        <p>Выложил: <strong><%= @book.user_name %></strong></p>
+        <% if @book.user_name.present? %>
+            <p>Выложил: <strong><%= @book.user_name %></strong></p>
+        <% end %>
     <% end %>
   </div>
 </div>
