@@ -1,5 +1,9 @@
 <p>Пользователь: <strong><%= @user.name %></strong></p>
 
+<% if current_user == @user %>
+    <%= link_to 'Редактировать', edit_user_path(@user), class: 'btn btn-primary' %>
+<% end %>
+
 <h3>Выложенные книги</h3>
 
 <div class="row buffer-bottom">

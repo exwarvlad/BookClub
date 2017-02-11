@@ -2,10 +2,6 @@
 
     <%= render partial: 'partials/form_errors', locals: {model: @book} %>
 
-    <script type="text/javascript" charset="utf-8">
-
-    </script>
-
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control', maxlength: Book::TITLE_MAXIMUM_LENGTH %>

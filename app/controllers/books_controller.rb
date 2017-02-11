@@ -13,6 +13,8 @@ class BooksController < ApplicationController
 
   def create
     @book = current_user.books.build(book_params)
+    @book.update_attributes(user_name: @book.user.name)
+
     if @book.save
       redirect_to root_path, notice: I18n.t('controllers.book.created')
     else

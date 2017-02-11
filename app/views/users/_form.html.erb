@@ -1,0 +1,22 @@
+<%= form_for(@user) do |f| %>
+
+    <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+    </div>
+
+    <div class="action buffer-bottom">
+      <%= f.submit 'Сохранить', class: 'btn btn-success' %>
+      <%= link_to 'Удалить', @user, class: 'btn btn-danger', method: :delete,
+                  data: {confirm: 'Вы действительно хотите удалить аккаунт?'} %>
+      или <%= link_to 'вернуться', :back %>
+    </div>
+
+<% end %>
