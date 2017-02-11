@@ -18,8 +18,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update
+    if @user.update(user_params)
       redirect_to @user, notice: I18n.t('controllers.user.updated')
+    else
+      render :edit
     end
   end
 
