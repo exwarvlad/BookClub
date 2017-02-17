@@ -20,6 +20,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
 
+gem 'figaro'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
