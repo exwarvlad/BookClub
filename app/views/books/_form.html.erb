@@ -31,7 +31,7 @@
     <div class="form-group">
       <%= f.label :description %>
       <span style="float: right;">
-        Осталось <span id="count1"><%= Book::DESCRIPTION_MAXIMUM_LENGTH %> </span> символов для ввода
+        Осталось <span id="count1"><%= Book::DESCRIPTION_MAXIMUM_LENGTH %> </span> символов
       </span>
       <%= f.text_area :description, class: 'form-control', id: 'contentbox1', maxlength: Book::DESCRIPTION_MAXIMUM_LENGTH %>
     </div>
