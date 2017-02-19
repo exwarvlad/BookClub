@@ -5,7 +5,7 @@ class Book < ActiveRecord::Base
   mount_uploader :avatar_title, AvatarTitleUploader
 
   TITLE_MAXIMUM_LENGTH = 42
-  AUTHOR_MAXIMUM_LENGTH = 42
+  AUTHOR_MAXIMUM_LENGTH = 100
   GENRE_MAXIMUM_LENGTH = 42
   YEAR_MAXIMUM_LENGTH = 42
   DESCRIPTION_MAXIMUM_LENGTH = 580
