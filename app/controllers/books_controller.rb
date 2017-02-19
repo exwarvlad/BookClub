@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   before_action :set_current_user_book, only: [:edit, :update, :destroy]
 
   def index
-    @books = Book.all
+    @books = Book.all.order("created_at ASC")
   end
 
   def new
