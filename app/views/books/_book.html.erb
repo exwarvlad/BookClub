@@ -1,4 +1,11 @@
 <!-- Паршиал отображения инфы об отдельной книге -->
+
+<div class="col-sm-4 col-md-2">
+  <div class="thumbnail">
+    <%= render_last_comments(book.comments.empty?, book.comments.last(3).map(&:body)) %>
+  </div>
+</div>
+
 <div class="col-sm-6 col-md-4">
   <div class="thumbnail">
 
