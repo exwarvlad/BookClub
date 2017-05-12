@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root "books#ebe8002086bf"
+  root "books#index"
+  get 'ebe8002086bf' => 'books#ebe8002086bf'
 end
