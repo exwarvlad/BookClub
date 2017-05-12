@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root "books#index"
+  root "books#ebe8002086bf"
 end
