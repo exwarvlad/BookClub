@@ -12,11 +12,13 @@ class ApplicationController < ActionController::Base
   end
 
   def go_out
-    uri = URI(request.url)
+    if Rails.env.production?
+      uri = URI(request.url)
 
-    if uri.host == '52.38.206.116'
-      uri.host = 'https://booksclub.tk'
-      redirect_to uri.to_s
+      if uri.host == '52.38.206.116'
+        uri.host = 'booksclub.tk'
+        redirect_to uri.to_s
+      end
     end
   end
 end
