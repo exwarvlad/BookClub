@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     uri = URI(request.url)
 
     if uri.host == '52.38.206.116'
-      uri.host = 'booksclub.tk'
+      uri.host = 'https://booksclub.tk'
       redirect_to uri.to_s
     end
   end
