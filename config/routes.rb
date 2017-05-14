@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :users
 
   root "books#index"
-  get 'mailru-domain4jL5vkTkwbeKpPbK' => 'books#mailru-domain4jL5vkTkwbeKpPbK'
+  get 'mailru-domain77X7VyHdlGy3Nk9o' => 'books#mailru-domain77X7VyHdlGy3Nk9o'
 end
